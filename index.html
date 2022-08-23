@@ -10,12 +10,12 @@
 <body class="bg-slate-800">
 	<header class="bg-gray-800">
 	
-		<div class="text-center text-2xl bg-gradient-to-r from-slate-900 to-gray-800 py-36 shadow-md capitalize">
-			<h1 class=" p-5 text-5xl text-cyan-400  capitalize tracking-wide">
+		<div class="text-center  bg-gradient-to-r from-slate-900 to-gray-800 py-36 shadow-md capitalize">
+			<h1 class="text-2xl md:text-3xl lg:text-5xl p-5 text-cyan-400  capitalize tracking-wide">
 				Choose Your 
 				<span class="bg-cyan-800 text-slate-50 px-2 rounded">Favourite</span> 
 				 Number of Players</h1>
-			<p class="px-40 text-gray-300 tracking-wide">choose from the world's best footballers. <br>
+			<p class="text-xs md:text-sm lg:text-xl px-40 text-gray-300 tracking-wide">choose from the world's best footballers... <br>
 			Knowledge | Experience | performance
 		</p>
 
@@ -23,9 +23,9 @@
 	</header>	
 
 	<main class="w-9/12 m-auto mt-10">
-		<div class="player-section grid grid-cols-3 gap-3">
+		<div class="player-section grid md:grid-cols-2 lg:grid-cols-3 gap-3">
 			<div class="player-display col-span-2">
-				<div class="player-cards grid grid-cols-3 gap-4 p-3 ease-in-out capitalize">
+				<div class="player-cards grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-3 ease-in-out capitalize">
 					<div class="card border-2 shadow-md text-center  bg-slate-900 border-black hover:border-gray-400 ">
 						<img class="drop-shadow-md" src="./assets/player-1.png" alt="">
 						<h1 id="neymar" class="text-white text-semibold text-2xl capitalize py-1">Neymar Jr</h1>
@@ -127,11 +127,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="sidebar  text-center mt-3 h-96 capitalize">
+			<div class="sidebar text-center mt-3 capitalize">
 				<div class="selected-area bg-gray-900 pb-10">
-					<h1 class="p-3 text-2xl text-white font-semibold underline decoration-2">
+					<h1 class="px-3 pt-3 text-2xl text-white font-semibold underline decoration-2">
 					Selected - V
 					</h1>
+					<p class="text-md pb-2 text-gray-600">Please Select players</p>
 					<div class="selected-players text-white">
 						<ol id="list" class="text-start px-5">
 							
@@ -140,17 +141,21 @@
 				</div>
 				<br>
 				<div class="budget-area bg-gray-900">
-					<h1 class="p-3 text-2xl text-white font-semibold underline decoration-2">
+					<h1 class="px-3 pt-3 text-2xl text-white font-semibold underline decoration-2">
 					Budget
 					</h1>
+					<p class="text-md pb-2 text-gray-600">Enter your budget per player</p>
+
 					<div class="player-budget grid grid-cols-3 px-3 pb-5">
 						<p class="text-gray-500 px-5 col-span-2 text-start">per player</p>
-						<input id="input-budget" class="text-center text-white bg-gray-800 border-gray-600 border-2 hover:border-white"  placeholder="$0" type="text">
+						<input id="input-budget" 
+						class="text-center text-white bg-gray-800 border-gray-600 border-2 hover:border-white" 
+						 placeholder="$0" type="number">
 					</div>
 					<button id="calculate-player" class="w-11/12 bg-slate-300 py-1 shadow-md mb-3 hover:bg-cyan-800 hover:text-slate-50 capitalize">calculate</button>
 					<div class="player-budget grid grid-cols-3 px-3 pb-5">
 						<p class="text-gray-500 px-5 col-span-2 text-start">player expenses</p>
-						<p class="text-gray-500">$<span id="player-expense">000</span></p>
+						<p class="text-gray-500">$<span id="player-expense">0</span></p>
 					</div>
 					<div class="player-budget grid grid-cols-3 px-3 pb-5">
 						<p class="text-gray-500 px-5 col-span-2 text-start">Manager</p>
@@ -163,7 +168,7 @@
 					<button id="total-bill" class="w-11/12 bg-slate-300 py-1 shadow-md mb-3 hover:bg-cyan-800 hover:text-slate-50 capitalize">calculate total</button>
 					<div class="player-budget grid grid-cols-3 px-3 pb-5">
 						<p class="text-gray-500 px-5 col-span-2 text-start">total budget</p>
-						<p class="text-gray-500">$<span id="display-total-bill">000</span></p>
+						<p class="text-gray-500">$<span id="display-total-bill">0</span></p>
 					</div>
 				</div>
 			</div>
